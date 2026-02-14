@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no logic.",
+  "feature_evidence.json": "Feature evidence listing three frontend modifications related to pig plushie images and static asset usage.",
+  "frontend-file-summaries.txt": "Prewritten summaries of key frontend files and components.",
+  "frontend/index.css": "Tailwind base styles and OKLCH color variables for light and dark mode themes.",
+  "frontend/index.html": "Basic HTML shell loading the React app via main.tsx.",
+  "frontend/src/App.tsx": "Main React component controlling question/yes/no views within Valentine layout.",
+  "frontend/src/components/valentine/CelebrationHearts.tsx": "Generates animated floating heart elements for the Yes state.",
+  "frontend/src/components/valentine/PersonalizationPanel.tsx": "Empty placeholder component.",
+  "frontend/src/components/valentine/ValentineLayout.tsx": "Layout wrapper providing themed background and overlay for readability.",
+  "frontend/src/components/valentine/ValentineNoState.tsx": "Card view for the No response with gentle messaging and a back button.",
+  "frontend/src/components/valentine/ValentineQuestionCard.tsx": "Main Valentine question card with top-positioned pig plushies, heart bouquet, message, and Yes/No buttons.",
+  "frontend/src/components/valentine/ValentineYesState.tsx": "Card view for the Yes response with celebratory hearts and uplifting messages.",
+  "frontend/src/hooks/useActor.ts": "React Query hook creating and managing an authenticated or anonymous backend actor.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and provider for managing Internet Identity login state using Dfinity AuthClient, including loading, login, logout, and status flags.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file indicating no backend queries are used and all state is client-side.",
+  "frontend/src/index.css": "Defines Tailwind base styles and a Valentine-themed color palette, typography, animations, and focus utilities.",
+  "frontend/src/main.tsx": "Bootstraps the React app, setting up React Query and the Internet Identity provider before rendering App.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, fonts, animations, and Valentine-themed design extensions, plus plugin integrations.",
+  "project_state.json": "Metadata file capturing project state, features, asset requirements, and architectural notes for the Valentine’s Day website."
+}

@@ -1,0 +1,78 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Swap Valentine card decorative pig plushies to 5 user-provided images (top-only)",
+  "requirements": [
+    {
+      "id": "REQ-15",
+      "summary": "Update ValentineQuestionCard to render exactly 5 decorative pig plushies, all positioned in the top area of the card content (none near the bottom).",
+      "acceptanceCriteria": [
+        "The question card renders exactly 5 decorative pig plushie images.",
+        "All 5 pig plushies are positioned in the top area (e.g., top-left/top-right/top-center region) and none appear at the bottom of the card.",
+        "No other parts of the UI (text, buttons, seal, bouquet) are removed or functionally changed."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/valentine/ValentineQuestionCard.tsx",
+          "operation": "modify",
+          "description": "Refactor the decorative pig plushies section so there are exactly 5 <img> elements and all are absolutely positioned within the top region of the CardContent container (e.g., top-left/top-right/top-center placements); remove any bottom-positioned pigs while keeping the rest of the card UI unchanged."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Stop using pig-plushie.dim_256x256.png and use 5 visually different local pig images for the decorative plushies (no duplicates).",
+      "acceptanceCriteria": [
+        "None of the decorative pig <img> elements in ValentineQuestionCard.tsx reference /assets/generated/pig-plushie.dim_256x256.png anymore.",
+        "The 5 decorative pigs displayed are visually different from each other (do not count duplicate uploads as separate)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/valentine/ValentineQuestionCard.tsx",
+          "operation": "modify",
+          "description": "Replace the decorative pig <img> src values to reference five distinct local pig assets (no repeated src), ensuring /assets/generated/pig-plushie.dim_256x256.png is no longer referenced anywhere in this component."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Add the 5 user-provided pig plushie images as static assets in frontend/public/assets/generated and reference them locally from ValentineQuestionCard (no external hotlinks).",
+      "acceptanceCriteria": [
+        "All pig plushie images used by ValentineQuestionCard.tsx are served from /assets/generated/* and exist in frontend/public/assets/generated.",
+        "No decorative pig image uses an external URL in its src attribute."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/pig-plushie-bunny.dim_256x256.png",
+          "operation": "create",
+          "description": "Add generated static asset for the bunny-hood pig holding a drink as specified in imageRequirements so it can be referenced locally by the Valentine question card."
+        },
+        {
+          "path": "frontend/public/assets/generated/pig-plushie-angel.dim_256x256.png",
+          "operation": "create",
+          "description": "Add generated static asset for the small winged/angel pig sitting as specified in imageRequirements so it can be referenced locally by the Valentine question card."
+        },
+        {
+          "path": "frontend/public/assets/generated/pig-plushie-stack.dim_256x256.png",
+          "operation": "create",
+          "description": "Add generated static asset for the stacked pig plushies as specified in imageRequirements so it can be referenced locally by the Valentine question card."
+        },
+        {
+          "path": "frontend/public/assets/generated/pig-plushie-blanket.dim_256x256.png",
+          "operation": "create",
+          "description": "Add generated static asset for the close-up chubby pig under blanket as specified in imageRequirements so it can be referenced locally by the Valentine question card."
+        },
+        {
+          "path": "frontend/public/assets/generated/pig-plushie-external-1.dim_256x256.png",
+          "operation": "create",
+          "description": "Create a local generated static asset sourced from the provided external pig image URL (no runtime hotlinking) so it can be referenced locally by the Valentine question card."
+        },
+        {
+          "path": "frontend/src/components/valentine/ValentineQuestionCard.tsx",
+          "operation": "modify",
+          "description": "Update the decorative pig plushie image src attributes to use only the locally added assets under /assets/generated/* (pig-plushie-bunny.dim_256x256.png, pig-plushie-angel.dim_256x256.png, pig-plushie-stack.dim_256x256.png, pig-plushie-blanket.dim_256x256.png, pig-plushie-external-1.dim_256x256.png) and ensure no external URLs are used."
+        }
+      ]
+    }
+  ]
+}

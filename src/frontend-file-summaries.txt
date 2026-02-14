@@ -1,0 +1,12 @@
+{
+  "frontend/src/index.css": "Global styles with Valentine's Day themed OKLCH color palette (warm reds, pinks, cream) for light and dark modes, custom focus styles, and heart animation keyframes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Valentine's romantic color tokens, Playfair Display serif font, custom shadows, and animation utilities.",
+  "frontend/src/App.tsx": "Main application component managing view state (question/yes/no) without personalization data, rendering Valentine's card flow with single-page navigation.",
+  "frontend/src/components/valentine/ValentineLayout.tsx": "Layout wrapper component providing romantic background with generated image asset, gradient fallback, and overlay for content readability.",
+  "frontend/src/components/valentine/ValentineQuestionCard.tsx": "Main question card displaying \"Will you be my Valentine?\" with a personalized romantic message for Lasya, decorative images (including the infinity stamp seal and 5 distinct pig plushie elements all positioned in the top area), and Yes/No action buttons.",
+  "frontend/src/components/valentine/ValentineYesState.tsx": "Celebration view shown when \"Yes\" is clicked, featuring romantic confirmation message with animated hearts and sparkles without personalized names.",
+  "frontend/src/components/valentine/ValentineNoState.tsx": "Gentle, playful response view for \"No\" selection with respectful messaging and option to reconsider, without personalized names.",
+  "frontend/src/components/valentine/CelebrationHearts.tsx": "Decorative animation component generating floating hearts that rise up the screen during the Yes celebration state.",
+  "frontend/src/components/valentine/PersonalizationPanel.tsx": "Form component with accessible inputs for recipient name, sender name, and optional personal note with live preview updates.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks (empty as backend has no methods and app is client-side only)."
+}

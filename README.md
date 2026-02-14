@@ -1,2 +1,3 @@
-# valentine-s-day-proposal-website-ask-wife-to-be-your-valentine
-Exported from Caffeine project: Valentine’s Day proposal website (ask wife to be your Valentine)
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

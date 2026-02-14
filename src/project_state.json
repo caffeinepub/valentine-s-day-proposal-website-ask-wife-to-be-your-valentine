@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 13,
+  "summary": "Valentine’s Day website to ask the user’s wife to be their Valentine.",
+  "architectural_notes": [
+    "Email-sending feature requires backend/server capability or third-party email service integration; cannot be client-only.",
+    "Capture/submit of post-Yes comments implies form handling and data transmission to backend/email service.",
+    "Do not hotlink external pig images; download/convert them into local static assets under frontend/public/assets/generated and update the decorative elements to reference those local files."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Pig plushie photo cutout (transparent background), bunny-hood pig holding a drink (pig-plushie-bunny.dim_256x256.png)\n- Pig plushie photo cutout (transparent background), small winged/angel pig sitting (pig-plushie-angel.dim_256x256.png)\n- Pig plushie photo cutout (transparent background), stacked pig plushies (pig-plushie-stack.dim_256x256.png)\n- Pig plushie photo cutout (transparent background), close-up chubby pig under blanket (pig-plushie-blanket.dim_256x256.png)\n- Pig plushie photo cutout (transparent background), angel/kawaii pig variant sourced from provided external image (pig-plushie-external-1.dim_256x256.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-valentine-s-day-website-experience-that-asks-the-user-s-wife-will-you-be-my-valentine-and-presents-clear-interactive-choices",
+      "title": "Create a single-page Valentine’s Day website experience that asks the user’s wife: “Will you be my Valentine?” and presents clear interactive choices.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-engaging-response-states-selecting-yes-shows-a-celebratory-view-e-g-hearts-confetti-animation-and-a-romantic-confirmation-message-and-selecting-no-shows-a-gentle-playful-alternative-response-without-being-offensive-or-manipulative",
+      "title": "Implement engaging response states: selecting “Yes” shows a celebratory view (e.g., hearts/confetti animation and a romantic confirmation message), and selecting “No” shows a gentle, playful alternative response without being offensive or manipulative.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-simple-personalization-section-client-side-only-so-the-user-can-set-a-short-message-and-names-e-g-to-name-from-name-that-appear-on-the-main-card-page",
+      "title": "Add a simple personalization section (client-side only) so the user can set a short message and names (e.g., “To: [Name]”, “From: [Name]”) that appear on the main card/page.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-distinctive-visual-theme-suitable-for-a-valentine-s-day-romantic-card-consistent-colors-typography-spacing-and-components-across-all-states-do-not-use-a-blue-purple-primary-palette",
+      "title": "Apply a cohesive, distinctive visual theme suitable for a Valentine’s Day romantic card (consistent colors, typography, spacing, and components across all states). Do not use a blue/purple primary palette.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-accessibility-and-usability-basics-keyboard-navigability-for-all-interactive-elements-visible-focus-states-and-appropriate-semantic-structure-for-headings-buttons",
+      "title": "Ensure accessibility and usability basics: keyboard navigability for all interactive elements, visible focus states, and appropriate semantic structure for headings/buttons.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-generated-image-assets-into-the-frontend-as-static-files-and-use-them-in-the-ui-served-from-frontend-public-assets-generated",
+      "title": "Add the required generated image assets into the frontend as static files and use them in the UI (served from frontend/public/assets/generated).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-personalization-ui-entirely-no-to-from-fields-and-no-editable-text-box-and-stop-collecting-any-user-entered-personalization-data-on-the-question-screen",
+      "title": "Remove the personalization UI entirely (no \"To\" / \"From\" fields and no editable text box) and stop collecting any user-entered personalization data on the question screen.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-previous-user-editable-note-to-from-area-with-a-single-predefined-non-editable-message-template-displayed-on-the-main-question-card",
+      "title": "Replace the previous user-editable note/to/from area with a single predefined, non-editable message template displayed on the main question card.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-yes-and-no-response-screens-to-no-longer-reference-recipient-sender-names-since-names-are-no-longer-collected",
+      "title": "Update the \"Yes\" and \"No\" response screens to no longer reference recipient/sender names, since names are no longer collected.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-predefined-non-editable-romantic-message-text-shown-in-the-main-question-card-frontend-src-components-valentine-valentinequestioncard-tsx-to-exactly-the-new-paragraph-provided-by-the-user-replacing-the-existing-message-paragraph-while-keeping-the-rest-of-the-ui-unchanged",
+      "title": "Update the predefined (non-editable) romantic message text shown in the main question card (frontend/src/components/valentine/ValentineQuestionCard.tsx) to exactly the new paragraph provided by the user, replacing the existing message paragraph while keeping the rest of the UI unchanged.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-new-cute-romantic-combined-graphic-representing-the-phrase-i-love-you-1-0-an-infinity-motif-and-a-stamp-seal-aesthetic-and-add-it-as-a-static-asset-under-frontend-public-assets-generated",
+      "title": "Generate a new cute, romantic combined graphic representing the phrase “I love you 1/0”, an infinity motif, and a stamp/seal aesthetic, and add it as a static asset under frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-only-the-selected-element-xpath-html-1-body-1-div-1-div-1-div-3-div-1-div-1-div-1-div-1-img-1-in-frontend-src-components-valentine-valentinequestioncard-tsx-replace-its-src-from-assets-generated-love-seal-dim-256x256-png-to-assets-generated-love-seal-infinity-stamp-dim-256x256-png-preserving-all-other-attributes-and-surrounding-ui-unchanged",
+      "title": "Update ONLY the selected element (XPath: /html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/img[1]) in frontend/src/components/valentine/ValentineQuestionCard.tsx: replace its src from /assets/generated/love-seal.dim_256x256.png to /assets/generated/love-seal-infinity-stamp.dim_256x256.png, preserving all other attributes and surrounding UI unchanged.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-only-the-selected-element-xpath-html-1-body-1-div-1-div-1-div-3-div-1-div-1-div-2-in-frontend-src-components-valentine-valentinequestioncard-tsx-to-include-3-5-very-small-cute-pig-plushie-decorative-elements-placed-around-behind-the-existing-content-within-that-selected-area-without-changing-any-other-elements-or-surrounding-ui",
+      "title": "Update ONLY the selected element (XPath: /html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]) in frontend/src/components/valentine/ValentineQuestionCard.tsx to include 3–5 very small cute pig plushie decorative elements placed around/behind the existing content within that selected area, without changing any other elements or surrounding UI.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-pig-plushie-image-asset-s-as-static-files-under-frontend-public-assets-generated-and-use-them-for-the-decorative-pig-plushie-elements-in-the-selected-area",
+      "title": "Add the required pig plushie image asset(s) as static files under frontend/public/assets/generated and use them for the decorative pig plushie elements in the selected area.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-decorative-pig-plushie-images-in-frontend-src-components-valentine-valentinequestioncard-tsx-so-that-there-are-exactly-5-decorative-pig-plushies-all-positioned-at-the-top-area-of-the-card-content-no-pig-plushies-placed-near-the-bottom",
+      "title": "Replace the existing decorative pig plushie images in frontend/src/components/valentine/ValentineQuestionCard.tsx so that there are exactly 5 decorative pig plushies, all positioned at the top area of the card content (no pig plushies placed near the bottom).",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-stop-using-assets-generated-pig-plushie-dim-256x256-png-for-the-decorative-pig-plushies-and-instead-use-5-different-pig-images-sourced-from-the-user-provided-images-links-deduplicate-identical-uploads-so-the-5-displayed-are-visually-different",
+      "title": "Stop using /assets/generated/pig-plushie.dim_256x256.png for the decorative pig plushies, and instead use 5 different pig images sourced from the user-provided images/links (deduplicate identical uploads so the 5 displayed are visually different).",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-user-provided-pig-plushie-images-as-static-assets-under-frontend-public-assets-generated-and-reference-them-from-valentinequestioncard-tsx-do-not-hotlink-external-urls-at-runtime-use-the-two-user-provided-urls-as-source-material-to-create-local-static-assets",
+      "title": "Add the user-provided pig plushie images as static assets under frontend/public/assets/generated and reference them from ValentineQuestionCard.tsx (do not hotlink external URLs at runtime). Use the two user-provided URLs as source material to create local static assets.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a Valentine’s Day website for the user’s wife that asks if she will be their Valentine.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Remove the To/From personalization fields and any editable text box; display only a predefined (non-editable) message template.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Send an email notification to the user once the recipient clicks “Yes/accepts” (include any provided comment in the email).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "After the recipient clicks “Yes”, allow them to enter a comment/message and submit it (used in the email notification).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Update the predefined (non-editable) romantic message template shown on the main question card to the new paragraph provided by the user.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Generate and replace the selected UI image asset with a single combined cute/romantic design representing “I love you 1/0”, infinity, and a stamp motif.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add 3–5 very small cute pig plushie elements as separate decorative background items placed around/behind the existing content within the selected area.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Replace current decorative pig plushie images with the user-provided pig plushie images; display 5 different pig plushies positioned at the top of the selected area.",
+      "reqIds": [
+        "REQ-13",
+        "REQ-14"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Valentine’s Day proposal website (ask wife to be your Valentine)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

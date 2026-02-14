@@ -1,0 +1,59 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-the-existing-decorative-pig-plushie-images-in-frontend-src-components-valentine-valentinequestioncard-tsx-so-that-there-are-exactly-5-decorative-pig-plushies-all-positioned-at-the-top-area-of-the-card-content-no-pig-plushies-placed-near-the-bottom",
+      "featureTitle": "Replace the existing decorative pig plushie images in frontend/src/components/valentine/ValentineQuestionCard.tsx so that there are exactly 5 decorative pig plushies, all positioned at the top area of the card content (no pig plushies placed near the bottom).",
+      "files": [
+        "frontend/src/components/valentine/ValentineQuestionCard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-stop-using-assets-generated-pig-plushie-dim-256x256-png-for-the-decorative-pig-plushies-and-instead-use-5-different-pig-images-sourced-from-the-user-provided-images-links-deduplicate-identical-uploads-so-the-5-displayed-are-visually-different",
+      "featureTitle": "Stop using /assets/generated/pig-plushie.dim_256x256.png for the decorative pig plushies, and instead use 5 different pig images sourced from the user-provided images/links (deduplicate identical uploads so the 5 displayed are visually different).",
+      "files": [
+        "frontend/src/components/valentine/ValentineQuestionCard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-user-provided-pig-plushie-images-as-static-assets-under-frontend-public-assets-generated-and-reference-them-from-valentinequestioncard-tsx-do-not-hotlink-external-urls-at-runtime-use-the-two-user-provided-urls-as-source-material-to-create-local-static-assets",
+      "featureTitle": "Add the user-provided pig plushie images as static assets under frontend/public/assets/generated and reference them from ValentineQuestionCard.tsx (do not hotlink external URLs at runtime). Use the two user-provided URLs as source material to create local static assets.",
+      "files": [
+        "frontend/src/components/valentine/ValentineQuestionCard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-14T01:48:34.285Z",
+  "summary": "ValentineQuestionCard.tsx was updated to render exactly five decorative pig plushie <img> elements using the specified new local asset paths and positioned at the top of the card. However, the diff does not show the required new pig image files being added under frontend/public/assets/generated, and two additional project metadata files were modified without being requested.",
+  "missing_requirements": [
+    {
+      "id": "REQ-17",
+      "requirement": "Add the user-provided pig plushie images as static assets under frontend/public/assets/generated and reference them from ValentineQuestionCard.tsx (do not hotlink external URLs at runtime).",
+      "reason": "The code references five new /assets/generated/*.png paths, but the diff shows no added files (and no changes under frontend/public/assets/generated), so there is no evidence the required static assets were actually added to the repo.",
+      "evidence": [
+        "File diff summary: \"Added: 0\"",
+        "frontend/src/components/valentine/ValentineQuestionCard.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Updated/edited repository metadata/summary files unrelated to replacing the decorative pig plushie images.",
+      "reason": "The BuildRequest asks only to replace pig plushie images and explicitly says not to introduce unrelated flows/changes. Modifying these summary/state files is not part of the requested implementation.",
+      "evidence": [
+        "frontend-file-summaries.txt",
+        "project_state.json"
+      ]
+    }
+  ],
+  "confidence": 0.78,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/valentine/ValentineQuestionCard.tsx",
+    "project_state.json"
+  ]
+}
