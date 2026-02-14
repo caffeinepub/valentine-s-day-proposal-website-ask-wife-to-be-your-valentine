@@ -29,53 +29,6 @@ export default function ValentineQuestionCard({
       </CardHeader>
       
       <CardContent className="space-y-8 pb-8 relative">
-        {/* Decorative pig plushies - all positioned in top area */}
-        <img
-          src="/assets/generated/pig-plushie-bunny.dim_256x256.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute top-2 left-2 w-10 h-10 md:w-14 md:h-14 object-contain opacity-70 pointer-events-none -z-10"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
-        <img
-          src="/assets/generated/pig-plushie-angel.dim_256x256.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute top-4 right-4 w-9 h-9 md:w-12 md:h-12 object-contain opacity-65 pointer-events-none -z-10"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
-        <img
-          src="/assets/generated/pig-plushie-stack.dim_256x256.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute top-0 left-1/4 w-8 h-8 md:w-11 md:h-11 object-contain opacity-60 pointer-events-none -z-10"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
-        <img
-          src="/assets/generated/pig-plushie-blanket.dim_256x256.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute top-1 right-1/4 w-11 h-11 md:w-15 md:h-15 object-contain opacity-75 pointer-events-none -z-10"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
-        <img
-          src="/assets/generated/pig-plushie-external-1.dim_256x256.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute top-6 left-1/2 -translate-x-1/2 w-7 h-7 md:w-10 md:h-10 object-contain opacity-55 pointer-events-none -z-10"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
-        
         {/* Heart bouquet illustration */}
         <div className="flex justify-center">
           <img

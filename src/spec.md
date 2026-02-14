@@ -1,11 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the decorative pig plushies on the Valentine question card with 5 visually different, user-provided pig images, all placed only in the top area of the card.
+**Goal:** Remove all decorative pig plushie imagery from the Valentine question screen while keeping the rest of the card intact.
 
 **Planned changes:**
-- Add 5 user-provided pig images as static assets under `frontend/public/assets/generated` (including local copies sourced from the two provided external URLs).
-- Update `frontend/src/components/valentine/ValentineQuestionCard.tsx` to render exactly 5 decorative pig plushies, all positioned in the top area of the card (none at the bottom).
-- Remove any usage of `/assets/generated/pig-plushie.dim_256x256.png` from the decorative pig elements and ensure the 5 displayed pigs are visually different (deduplicate identical uploads).
+- Delete the five absolutely-positioned pig plushie `<img>` elements from `frontend/src/components/valentine/ValentineQuestionCard.tsx` so no pig images render on the Question view.
+- Remove any remaining frontend code references to pig plushie asset filenames (`/assets/generated/pig-plushie-*.png`) to ensure they are not loaded anywhere.
 
-**User-visible outcome:** The Valentine question card shows five different pig plushie decorations clustered at the top of the card, with the rest of the UI (text, buttons, seal, bouquet) unchanged.
+**User-visible outcome:** The Question view shows the seal, heart bouquet, message text, and Yes/No buttons as before, but no pig plushie images appear anywhere on the screen.

@@ -1,30 +1,29 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-14T01:48:34.285Z",
-  "summary": "ValentineQuestionCard.tsx was updated to render exactly five decorative pig plushie <img> elements using the specified new local asset paths and positioned at the top of the card. However, the diff does not show the required new pig image files being added under frontend/public/assets/generated, and two additional project metadata files were modified without being requested.",
+  "generatedAt": "2026-02-14T01:52:28.065Z",
+  "summary": "ValentineQuestionCard.tsx was updated to remove pig plushie imagery from the question card UI, but the diff also changes the No button label (not requested). The diff does not provide sufficient evidence to confirm that all pig plushie asset references were removed across the entire frontend codebase.",
   "missing_requirements": [
     {
-      "id": "REQ-17",
-      "requirement": "Add the user-provided pig plushie images as static assets under frontend/public/assets/generated and reference them from ValentineQuestionCard.tsx (do not hotlink external URLs at runtime).",
-      "reason": "The code references five new /assets/generated/*.png paths, but the diff shows no added files (and no changes under frontend/public/assets/generated), so there is no evidence the required static assets were actually added to the repo.",
+      "id": "REQ-19",
+      "requirement": "Ensure the pig plushie static image assets are no longer referenced anywhere in the frontend codebase after removal (project-wide zero references).",
+      "reason": "The diff summary only shows changes to ValentineQuestionCard.tsx and does not include evidence of a project-wide removal/search confirming zero remaining references in other files.",
       "evidence": [
-        "File diff summary: \"Added: 0\"",
-        "frontend/src/components/valentine/ValentineQuestionCard.tsx"
+        "frontend/src/components/valentine/ValentineQuestionCard.tsx",
+        "frontend-file-summaries.txt"
       ]
     }
   ],
   "hallucinated_features": [
     {
-      "description": "Updated/edited repository metadata/summary files unrelated to replacing the decorative pig plushie images.",
-      "reason": "The BuildRequest asks only to replace pig plushie images and explicitly says not to introduce unrelated flows/changes. Modifying these summary/state files is not part of the requested implementation.",
+      "description": "Changed the No button copy to \"Maybe later...\" (and thus altered user-facing text) on the question card.",
+      "reason": "BuildRequest explicitly states not to change the Yes/No button copy/behavior; the only requested change was removing pig plushie images.",
       "evidence": [
-        "frontend-file-summaries.txt",
-        "project_state.json"
+        "frontend/src/components/valentine/ValentineQuestionCard.tsx"
       ]
     }
   ],
-  "confidence": 0.78,
+  "confidence": 0.74,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/valentine/ValentineQuestionCard.tsx",
